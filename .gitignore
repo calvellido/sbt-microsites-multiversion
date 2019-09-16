@@ -106,4 +106,7 @@ project/plugins/project/
 ### Jekyll ###
 _site
 
+### Metals ###
+.metals
+
 # End of https://www.gitignore.io/api/sbt,scala,intellij
