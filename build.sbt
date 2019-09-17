@@ -8,6 +8,6 @@ micrositeGithubOwner := "calvellido"
 micrositeGithubRepo := "sbt-microsites-multiversion"
 micrositeGitterChannel := false
 micrositePushSiteWith := GitHub4s
-micrositeGithubToken := System.getenv("GITHUB_TOKEN")
+micrositeGithubToken := sys.env.get("GITHUB_TOKEN")
 
 enablePlugins(MicrositesPlugin)
