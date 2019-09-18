@@ -1,4 +1,4 @@
-micrositeName := "sbt-microsites-multiversion"
+name := "sbt-microsites-multiversion"
 micrositeDescription := "sbt-microsites-multiversion description"
 micrositeAuthor := "ACME"
 micrositeUrl := "https://calvellido.github.io/sbt-microsites-multiversion/"
