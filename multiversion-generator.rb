@@ -54,6 +54,11 @@ def generate_microsite(version, versions_list)
   system "sbt makeMicrosite";
   # system "JEKYLL_ENV=production BUNDLE_GEMFILE=./#{$source_dir}/Gemfile bundle exec jekyll build -s #{$source_dir} -d #{$gen_docs_dir}/#{version} -b #{version}"
   # system "rm -rf #{$source_dir}/docs"
+  `mkdir -p #{$gen_docs_dir}`
+  `mkdir -p #{$gen_docs_dir}/#{version}`
+
+  `mv #{$source_dir}/* #{$gen_docs_dir}/#{version}`
+
   system "ls -la #{$source_dir}"
   system "ls -la #{$gen_docs_dir}/#{version}"
 end
@@ -124,7 +129,8 @@ if tags.any?
                         # system "git reset --hard HEAD";
 
                         `mkdir -p #{$gen_docs_dir}`
-                        `touch #{$gen_docs_dir}/.gitkeep`
+                        `mkdir -p #{$gen_docs_dir}/#{t}`
+                        `touch #{$gen_docs_dir}/#{t}/.gitkeep`
                         # system "git add #{$gen_docs_dir}";
 
                         # system "git clean -dxfn";
@@ -142,7 +148,7 @@ if tags.any?
                         # system "swift package clean"
                         # system "swift build"
                         generate_microsite("#{t}", versions)
-                        `mv #{$source_dir}/* #{$gen_docs_dir}/`
+                        # `mv #{$source_dir}/* #{$gen_docs_dir}/#{t}`
                       }
 
   if filtered_tags.any?
