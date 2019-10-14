@@ -117,11 +117,16 @@ if tags.any?
                         system "ls -la #{$gen_docs_dir}"
                         system "echo == == =="
 
+                        # `mkdir -p #{$gen_docs_dir}`
+                        # `touch #{$gen_docs_dir}/.gitkeep`
+                        # system "git add #{$gen_docs_dir}";
+
+                        system "git reset --hard HEAD";
+
                         `mkdir -p #{$gen_docs_dir}`
                         `touch #{$gen_docs_dir}/.gitkeep`
                         system "git add #{$gen_docs_dir}";
 
-                        system "git reset --hard HEAD";
                         system "git clean -dxfn";
                         system "git clean -dxf";
                         #
