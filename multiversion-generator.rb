@@ -110,6 +110,7 @@ if tags.any?
                         })
                       }
   filtered_tags.each { |t|
+                        system "ls -la #{$gen_docs_dir}"
                         system "git reset --hard HEAD";
                         `mkdir -p #{$gen_docs_dir}`
                         system "git add #{$gen_docs_dir}";
