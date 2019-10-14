@@ -158,9 +158,9 @@ end
 # Now, we generate the content available at the initial branch (master?)
 # to be at $current_branch_path (/next?) path
 if !$current_branch_path.to_s.empty?
-  system "git reset --hard HEAD";
-  system "git clean -dxfn";
-  system "git clean -dxf";
+  # system "git reset --hard HEAD";
+  # system "git clean -dxfn";
+  # system "git clean -dxf";
   `git checkout -f #{current_branch_tag}`
   system "echo == Current branch/tag is now #{current_branch_tag}"
   system "echo == Compiling the library in #{current_branch_tag}"
@@ -170,9 +170,9 @@ if !$current_branch_path.to_s.empty?
 end
 
 # Finally, we generate the docs for the default version
-system "git reset --hard HEAD";
-system "git clean -dxfn";
-system "git clean -dxf";
+# system "git reset --hard HEAD";
+# system "git clean -dxfn";
+# system "git clean -dxf";
 `git checkout -f #{$default_version}`
 system "echo == Current branch/tag is now #{$default_version}"
 # system "echo == Compiling the library in #{current_branch_tag}"
