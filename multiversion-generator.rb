@@ -116,6 +116,9 @@ if tags.any?
                         #
                         system "git checkout -f #{t}"
                         system "echo == Current branch/tag is now #{t}"
+
+                        system "ls -la #{$gen_docs_dir}"
+
                         # `mkdir -p #{$gen_docs_dir}`
                         # system "echo == Compiling the library in #{t}"
                         # system "swift package clean"
