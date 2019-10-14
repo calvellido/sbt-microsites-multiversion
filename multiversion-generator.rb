@@ -54,8 +54,8 @@ def generate_microsite(version, versions_list)
   system "sbt makeMicrosite";
   # system "JEKYLL_ENV=production BUNDLE_GEMFILE=./#{$source_dir}/Gemfile bundle exec jekyll build -s #{$source_dir} -d #{$gen_docs_dir}/#{version} -b #{version}"
   # system "rm -rf #{$source_dir}/docs"
-  # system "ls -la #{$source_dir}"
-  # system "ls -la #{$gen_docs_dir}/#{version}"
+  system "ls -la #{$source_dir}"
+  system "ls -la #{$gen_docs_dir}/#{version}"
 end
 
 
