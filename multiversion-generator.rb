@@ -80,6 +80,7 @@ end
 # Directory initialization
 `mkdir -p #{$publishing_dir}`
 `mkdir -p #{$gen_docs_dir}`
+`touch #{$gen_docs_dir}/.gitkeep`
 
 # Initial generic logic and dependencies for the docs site
 # system "echo == Installing ruby dependencies"
