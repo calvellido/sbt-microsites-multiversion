@@ -82,6 +82,8 @@ end
 `mkdir -p #{$gen_docs_dir}`
 `touch #{$gen_docs_dir}/.gitkeep`
 
+system "ls -la #{$gen_docs_dir}"
+
 # Initial generic logic and dependencies for the docs site
 # system "echo == Installing ruby dependencies"
 # system "bundle install --gemfile #{$source_dir}/Gemfile --path vendor/bundle"
