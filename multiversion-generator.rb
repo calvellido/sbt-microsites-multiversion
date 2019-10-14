@@ -108,11 +108,13 @@ if tags.any?
                       }
   filtered_tags.each { |t|
                         system "git reset --hard HEAD";
+                        system "git add #{$gen_docs_dir}";
                         system "git clean -dxfn";
                         system "git clean -dxf";
                         #
                         system "git checkout -f #{t}"
                         system "echo == Current branch/tag is now #{t}"
+                        # `mkdir -p #{$gen_docs_dir}`
                         # system "echo == Compiling the library in #{t}"
                         # system "swift package clean"
                         # system "swift build"
