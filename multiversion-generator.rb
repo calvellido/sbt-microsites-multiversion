@@ -82,9 +82,9 @@ end
 `mkdir -p #{$gen_docs_dir}`
 `touch #{$gen_docs_dir}/.gitkeep`
 
-system "echo * * *"
+system "echo == == =="
 system "ls -la #{$gen_docs_dir}"
-system "echo * * *"
+system "echo == == =="
 
 
 # Initial generic logic and dependencies for the docs site
@@ -113,9 +113,9 @@ if tags.any?
                         })
                       }
   filtered_tags.each { |t|
-                        system "echo * * *"
+                        system "echo == == =="
                         system "ls -la #{$gen_docs_dir}"
-                        system "echo * * *"
+                        system "echo == == =="
 
                         system "git reset --hard HEAD";
                         `mkdir -p #{$gen_docs_dir}`
@@ -126,9 +126,9 @@ if tags.any?
                         system "git checkout -f #{t}"
                         system "echo == Current branch/tag is now #{t}"
 
-                        system "echo * * *"
+                        system "echo == == =="
                         system "ls -la #{$gen_docs_dir}"
-                        system "echo * * *"
+                        system "echo == == =="
 
                         # `mkdir -p #{$gen_docs_dir}`
                         # system "echo == Compiling the library in #{t}"
