@@ -121,15 +121,15 @@ if tags.any?
                         # `touch #{$gen_docs_dir}/.gitkeep`
                         # system "git add #{$gen_docs_dir}";
 
-                        system "git reset --hard HEAD";
+                        # system "git reset --hard HEAD";
 
                         `mkdir -p #{$gen_docs_dir}`
                         `touch #{$gen_docs_dir}/.gitkeep`
-                        system "git add #{$gen_docs_dir}";
+                        # system "git add #{$gen_docs_dir}";
 
-                        system "git clean -dxfn";
-                        system "git clean -dxf";
-                        #
+                        # system "git clean -dxfn";
+                        # system "git clean -dxf";
+
                         system "git checkout -f #{t}"
                         system "echo == Current branch/tag is now #{t}"
 
