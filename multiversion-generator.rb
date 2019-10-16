@@ -53,7 +53,7 @@ def generate_microsite(version, versions_list)
   # sbt ++$TRAVIS_SCALA_VERSION ^^$SBT_VERSION clean compile test
 
   currentMicrositeBaseUrl = `sbt --error 'print micrositeBaseUrl'`.strip
-  system "echo == micrositeBaseUrl is #{currentMicrositeBaseUrl}"
+  system "echo == micrositeBaseUrl is #{currentMicrositeBaseUrl} lalalala"
   system "echo == micrositeBaseUrl will become #{currentMicrositeBaseUrl}/#{version}"
 
   # system "sbt makeMicrosite";
@@ -73,11 +73,11 @@ end
 
 # Initially, we save the name of the current branch/tag to be used later
 current_branch_tag = `git name-rev --name-only HEAD`.strip
-system "echo == Current branch/tag is #{current_branch_tag} lalalalala"
-current_branch_tag_chars = current_branch_tag.chars
-system "echo == Current branch/tag chars are #{current_branch_tag_chars}"
+# system "echo == Current branch/tag is #{current_branch_tag} lalalalala"
+# current_branch_tag_chars = current_branch_tag.chars
+# system "echo == Current branch/tag chars are #{current_branch_tag_chars}"
 # current_branch_tag
-system "echo == Current branch/tag is #{current_branch_tag.strip} lalalalalala"
+system "echo == Current branch/tag is #{current_branch_tag} lalalalalala"
 
 #This is the list of versions that will be built, and used, as part of the process
 versions = []
