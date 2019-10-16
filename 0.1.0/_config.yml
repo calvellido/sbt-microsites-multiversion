@@ -1,0 +1,11 @@
+name: sbt-microsites-multiversion
+baseurl: /sbt-microsites-multiversion
+description: sbt-microsites-multiversion description
+highlighter: rouge
+docs: true
+collections:
+  tut:
+    output: true
+version: 0.1.0
+org: default
+markdown: kramdown
