@@ -54,6 +54,7 @@ def generate_microsite(version, versions_list)
 
   currentMicrositeBaseUrl = `sbt --error 'print micrositeBaseUrl'`
   system "echo == micrositeBaseUrl is #{currentMicrositeBaseUrl}"
+  system "echo == micrositeBaseUrl will become #{currentMicrositeBaseUrl}/#{version}"
 
   # system "sbt makeMicrosite";
   `sbt 'set micrositeBaseUrl := "#{currentMicrositeBaseUrl}/#{version}"' makeMicrosite`
