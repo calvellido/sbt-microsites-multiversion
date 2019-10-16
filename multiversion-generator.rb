@@ -51,7 +51,13 @@ def generate_microsite(version, versions_list)
   # Removing lockfile to avoid conflicts in case it differs between versions
   # system "rm #{$source_dir}/Gemfile.lock"
   # sbt ++$TRAVIS_SCALA_VERSION ^^$SBT_VERSION clean compile test
-  system "sbt makeMicrosite";
+
+  currentMicrositeBaseUrl = `sbt --error 'print micrositeBaseUrl'`
+  system "echo == micrositeBaseUrl is #{currentMicrositeBaseUrl}"
+
+  # system "sbt makeMicrosite";
+  `sbt 'set micrositeBaseUrl := "#{currentMicrositeBaseUrl}/#{version}"' makeMicrosite`
+
   # system "JEKYLL_ENV=production BUNDLE_GEMFILE=./#{$source_dir}/Gemfile bundle exec jekyll build -s #{$source_dir} -d #{$gen_docs_dir}/#{version} -b #{version}"
   # system "rm -rf #{$source_dir}/docs"
   `mkdir -p #{$gen_docs_dir}`
