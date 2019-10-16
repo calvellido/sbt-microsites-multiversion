@@ -72,8 +72,12 @@ end
 
 
 # Initially, we save the name of the current branch/tag to be used later
-current_branch_tag = `git name-rev --name-only HEAD`.strip
+current_branch_tag = `git name-rev --name-only HEAD`
 system "echo == Current branch/tag is #{current_branch_tag}"
+current_branch_tag_chars = current_branch_tag.chars
+system "echo == Current branch/tag chars are #{current_branch_tag_chars}"
+# current_branch_tag
+system "echo == Current branch/tag is #{current_branch_tag.strip} lalalalalala"
 
 #This is the list of versions that will be built, and used, as part of the process
 versions = []
