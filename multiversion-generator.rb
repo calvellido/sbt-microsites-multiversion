@@ -52,7 +52,7 @@ def generate_microsite(version, versions_list)
   # system "rm #{$source_dir}/Gemfile.lock"
   # sbt ++$TRAVIS_SCALA_VERSION ^^$SBT_VERSION clean compile test
 
-  currentMicrositeBaseUrl = `sbt --error 'print micrositeBaseUrl'`
+  currentMicrositeBaseUrl = `sbt --error 'print micrositeBaseUrl'`.strip
   system "echo == micrositeBaseUrl is #{currentMicrositeBaseUrl}"
   system "echo == micrositeBaseUrl will become #{currentMicrositeBaseUrl}/#{version}"
 
@@ -72,7 +72,7 @@ end
 
 
 # Initially, we save the name of the current branch/tag to be used later
-current_branch_tag = `git name-rev --name-only HEAD`
+current_branch_tag = `git name-rev --name-only HEAD`.strip
 system "echo == Current branch/tag is #{current_branch_tag}"
 
 #This is the list of versions that will be built, and used, as part of the process
