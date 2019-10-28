@@ -7,5 +7,14 @@ collections:
   tut:
     output: true
 version: 0.3.0-SNAPSHOT
+include:
+- css/monokai.css
+- css/codemirror.css
+- css/light-palette.css
+- css/light-palette.scss
+- css/light-style.css
+- css/light-style.scss
+exclude:
+- css
 org: default
 markdown: kramdown
