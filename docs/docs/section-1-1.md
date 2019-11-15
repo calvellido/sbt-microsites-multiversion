@@ -1,5 +1,6 @@
 ---
 layout: docs
+permalink: docs/section-1-1/
 ---
 
 # sbt-microsites-multiversion docs section 1-1
