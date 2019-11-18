@@ -1,5 +1,8 @@
 ---
 layout: homeFeatures
+title:  "Home"
+section: "section_home"
+position: 1
 features:
  - first:   ["Configuration", "sbt-microsites facilitates the creation of fancy microsites for your projects, with minimal tweaks"]
  - second:  ["Customize", "sbt-microsites provides a considerable scope for improvement and customization in terms of images and styles"]
