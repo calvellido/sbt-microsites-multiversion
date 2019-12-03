@@ -10,7 +10,7 @@ micrositeOrganizationHomepage := "https://www.47deg.com"
 micrositeGithubOwner := "calvellido"
 micrositeGithubRepo := "sbt-microsites-multiversion"
 micrositeGitterChannel := false
-micrositePushSiteWith := GitHub4s
+// micrositePushSiteWith := GitHub4s
 micrositeGithubToken := sys.env.get("GITHUB_TOKEN")
 // micrositePalette := Map(
 //         "brand-primary" -> "violet",
@@ -29,6 +29,6 @@ micrositeGithubToken := sys.env.get("GITHUB_TOKEN")
 // micrositeTheme := "pattern"
 // micrositeHighlightLanguages ++= Seq("protobuf", "thrift")
 // micrositeHighlightTheme := "monokai"
-micrositeVersionList := List("0.1.0", "0.2.0")
+// micrositeVersionList := List("0.1.0", "0.2.0")
 
 enablePlugins(MicrositesPlugin)
