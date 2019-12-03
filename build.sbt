@@ -10,7 +10,7 @@ micrositeOrganizationHomepage := "https://www.47deg.com"
 micrositeGithubOwner := "calvellido"
 micrositeGithubRepo := "sbt-microsites-multiversion"
 micrositeGitterChannel := false
-micrositePushSiteWith := GitHub4s
+// micrositePushSiteWith := GitHub4s
 micrositeGithubToken := sys.env.get("GITHUB_TOKEN")
 // micrositePalette := Map(
 //         "brand-primary" -> "violet",
